@@ -45,7 +45,7 @@ class MovieSeeder extends Seeder
         $theaterMovieIds->each(function ($theaterMovieId) {
             // Generate up to 15 random transactions for each theater/movie combo
             for ($index = 0; $index < random_int(1, 15); $index++) {
-                $randomSubTotal = fake()->randomNumber();
+                $randomSubTotal = random_int(10, 100);
                 DB::table('theater_movie_transactions')->insert([
                     'theater_movie_id' => $theaterMovieId,
                     'sub_total' => $randomSubTotal,

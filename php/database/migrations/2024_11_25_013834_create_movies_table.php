@@ -14,14 +14,14 @@ return new class extends Migration
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('genre'); // Could also possibly be a separate table for genres
-            $table->text('plot');
-            $table->string('language');
-            $table->string('country');
-            $table->string('rating'); // This can be `rating_id` for a ratings table, but seems excessive right now.
+            $table->string('genre')->nullable(); // Could also possibly be a separate table for genres
+            $table->text('plot')->nullable();
+            $table->string('language')->nullable();
+            $table->string('country')->nullable();
+            $table->string('rating')->nullable(); // This can be `rating_id` for a ratings table, but seems excessive right now.
             $table->date('release_date');
-            $table->integer('runtime');
-            $table->text('poster');
+            $table->integer('runtime')->nullable();
+            $table->text('poster')->nullable();
             $table->timestamps();
         });
     }
