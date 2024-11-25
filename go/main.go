@@ -5,10 +5,16 @@ import (
 	"log"
 	"os"
 
+	"github.com/joho/godotenv"
 	"github.com/urfave/cli/v2"
 )
 
 func main() {
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
 	app := &cli.App{
 		Commands: []*cli.Command{
 			{
