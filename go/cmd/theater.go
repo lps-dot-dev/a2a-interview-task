@@ -3,7 +3,6 @@ package cmd
 import (
 	"database/sql"
 	"fmt"
-	"log"
 	"time"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -20,7 +19,7 @@ func GetMostSalesByDay(context *cli.Context, connection *sql.DB) error {
 	// Validates the given date argument against the following format: "Y-m-d"
 	startOfDay, dateTimeError := time.Parse(time.DateOnly, context.Args().Get(0))
 	if dateTimeError != nil {
-		log.Fatal(dateTimeError.Error())
+		return dateTimeError
 	}
 
 	year, month, day := startOfDay.Date()
@@ -34,7 +33,7 @@ func GetMostSalesByDay(context *cli.Context, connection *sql.DB) error {
 
 	results, queryError := connection.Query(query)
 	if queryError != nil {
-		log.Fatal(queryError.Error())
+		return queryError
 	}
 
 	var theaterName string
@@ -44,7 +43,7 @@ func GetMostSalesByDay(context *cli.Context, connection *sql.DB) error {
 
 		scanError := results.Scan(&theaterTotals.Id, &theaterTotals.Name, &theaterTotals.SumTotal)
 		if scanError != nil {
-			log.Fatal(scanError.Error())
+			return scanError
 		}
 
 		if theaterTotals.SumTotal > theaterSales {
