@@ -34,7 +34,7 @@ func main() {
 						Name:  "most-sales-by-day",
 						Usage: "find which movie theater generated the most sales for that day.",
 						Action: func(cCtx *cli.Context) error {
-							return cmd.GetMostSalesByDay(cCtx)
+							return cmd.GetMostSalesByDay(cCtx, databaseConnection)
 						},
 					},
 				},
