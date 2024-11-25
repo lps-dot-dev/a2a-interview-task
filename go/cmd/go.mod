@@ -1,10 +1,9 @@
-module a2a-theaters
+module a2a-theaters/cmd
 
 go 1.22.2
 
 require (
 	github.com/go-sql-driver/mysql v1.8.1
-	github.com/joho/godotenv v1.5.1
 	github.com/urfave/cli/v2 v2.27.5
 )
 

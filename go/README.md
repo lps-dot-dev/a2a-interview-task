@@ -7,5 +7,5 @@
 ## Usage
 First, make sure to install any missing dependencies with `go mod download && go mod verify`. You can choose to build the application but for this example we can just run the application using the following command:
 ```
-go run main.go theaters most-sales-by-day
+go run main.go theaters most-sales-by-day "Y-m-d"
 ```
