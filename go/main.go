@@ -1,6 +1,7 @@
 package main
 
 import (
+	"a2a-theaters/cmd"
 	"database/sql"
 	"fmt"
 	"log"
@@ -33,8 +34,7 @@ func main() {
 						Name:  "most-sales-by-day",
 						Usage: "find which movie theater generated the most sales for that day.",
 						Action: func(cCtx *cli.Context) error {
-							fmt.Println("Not yet implemented!")
-							return nil
+							return cmd.GetMostSalesByDay(cCtx)
 						},
 					},
 				},

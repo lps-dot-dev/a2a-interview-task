@@ -1,3 +1,7 @@
 go 1.22.2
 
-use ./models
+use (
+	.
+	./cmd
+	./models
+)
