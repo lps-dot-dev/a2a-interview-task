@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 /**
  * @property int id
@@ -13,5 +14,8 @@ use Illuminate\Database\Eloquent\Model;
  */
 class Theater extends Model
 {
-    //
+    public function movies(): BelongsToMany
+    {
+        return $this->belongsToMany(Movie::class);
+    }
 }
