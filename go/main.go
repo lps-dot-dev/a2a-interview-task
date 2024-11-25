@@ -46,7 +46,6 @@ func main() {
 		log.Fatal(appError.Error())
 	}
 
-	// defer the close till after the main function has finished
-	// executing
+	// defer the close till after the main function has finished executing
 	defer databaseConnection.Close()
 }
