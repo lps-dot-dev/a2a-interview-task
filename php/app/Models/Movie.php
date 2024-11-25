@@ -22,6 +22,18 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
  */
 class Movie extends Model
 {
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
+    {
+        return [
+            'release_date' => 'date',
+        ];
+    }
+
     public function theaters(): BelongsToMany
     {
         return $this->belongsToMany(Theater::class);

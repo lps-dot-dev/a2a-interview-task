@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('language');
             $table->string('country');
             $table->string('rating'); // This can be `rating_id` for a ratings table, but seems excessive right now.
-            $table->timestamp('release_date');
+            $table->date('release_date');
             $table->integer('runtime');
             $table->text('poster');
             $table->timestamps();
