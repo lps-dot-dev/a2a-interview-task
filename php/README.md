@@ -5,7 +5,7 @@ I am leveraging Docker for the local dev environment to prevent the need of havi
 ## Database Migrations and Seeding
 Firstly, running `docker-compose exec a2a-app php artisan migrate` from this directory will create the necessary database tables. There are also two seeder classes that can be accessed by running `docker-compose exec a2a-app php artisan db:seed` to populate our newly created tables with some test data.
 
-**NOTE:** An API key for [The Movie Database API](https://developer.themoviedb.org/docs/getting-started) will be required to get some initial data via the `MovieSeeder`.
+**NOTE:** An API key for [The Movie Database API](https://developer.themoviedb.org/docs/getting-started) will be required to get some initial data via the `MovieSeeder`. The API key is set via the `.env` file in this directory as the `MOVIEDB_API_KEY` variable.
 
 ## Primary Task
 The primary task was implemented using Laravel's artisan commands. It provides a helpful set of commands to assist with input and output of CLI programs. The following instructions will help you see that command in action for yourself:
