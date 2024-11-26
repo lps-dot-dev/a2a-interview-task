@@ -24,3 +24,6 @@ In hind sight, it probably is not necessary to have a `total` column since we ca
 
 ## Database Dump
 Please see the `dump-a2a_theaters-202411251654.sql` file for the entire dump of the database.
+
+## Supplemental Task (WIP)
+My plan is to extend my PHP solution with a Vue.js front-end with a couple of CRUD endpoints to help users better visualize the transactions.
