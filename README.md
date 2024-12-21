@@ -1,7 +1,7 @@
 # A2A Interview Task
 
 ## Getting Started
-The suggested order would be to start by visiting the PHP solution first, as it will setup a local dev environment using Docker that will have the containerized MySQL DB that is pivotal to both the PHP and Go solutions.
+See `A2A Interview Task.pdf` for task specifics. The suggested order would be to start by visiting the PHP solution first, as it will setup a local dev environment using Docker that will have the containerized MySQL DB that is pivotal to both the PHP and Go solutions.
 
 ## Schema Explanation
 
